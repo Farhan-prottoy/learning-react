@@ -11,13 +11,18 @@ function App() {
     count += 5;
     setCounter(count);
     console.log("Clicked! Counter is now: ", count);
-
   }
+    const removeValue = () =>{
+      count -= 5;
+      setCounter(count);
+      console.log("Removed counter value = ", count)
+    }
   return (
     <>
       <h1>Hello, React!</h1>
       <h3>starting to count: {count}</h3>
       <button onClick={addValue}>Add Value</button>
+      <button onClick={removeValue}>Remove Value</button>
     </>
   )
 }
