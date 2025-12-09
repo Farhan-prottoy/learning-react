@@ -4,15 +4,19 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  let counter = 15;
+  // let counter = 15;
+  let [count, setCounter] = useState(15)
 
   const addValue = () => {
-    console.log('adding value', Math.random());
+    count += 5;
+    setCounter(count);
+    console.log("Clicked! Counter is now: ", count);
+
   }
   return (
     <>
       <h1>Hello, React!</h1>
-      <h3>starting to count: {counter}</h3>
+      <h3>starting to count: {count}</h3>
       <button onClick={addValue}>Add Value</button>
     </>
   )
